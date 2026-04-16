@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int arry[5];
+    for (int i = 0; i < 5; i++)
+    {
+    scanf("%d",&arry[i]);
+    }
+    printf("please entre the number which you want to search in arry");
+    int a ;
+    scanf("%d",&a);
+    int found =0 ;
+    
+    for (int i = 0; i < 5; i++)
+    {
+        if (arry[i]==a)
+        {
+           found=1;
+        }
+    }
+    for (int  i = 0; i < 5; i++)
+    {
+        if (found==1)
+    {
+        printf("numerb found at %d",i+1);
+        break;
+     }}
+    
+    return 0;
+}
