@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int arrays[5];
+    printf("please entte the emlts of arrya");
+    for (int i = 0; i < 5; i++)
+    {
+        scanf("%d",&arrays[i]);
+    }
+    printf("please entre which postion do you want to delte ");
+    int a;
+    scanf("%d",&a);
+    for (int i = a; i <5; i++)
+    {
+        arrays[i]=arrays[i+1];
+    }
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%d",arrays[i]);
+    }
+    
+    return 0;
+}
