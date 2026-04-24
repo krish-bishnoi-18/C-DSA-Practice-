@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int array [6];
+    for (int i = 0; i < 5; i++)
+    {
+        scanf("%d",&array[i]);
+    }
+    printf("now this is original arrya ");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d\n",array[i]);
+    }
+    printf("please entre the number which you want to add a number and at whoich position you want to add that number");
+    int number , position;
+    scanf("%d %d ",&number,&position);
+    for (int i = 4; i >=position; i--)
+    {
+        array[i+1]=array[i];
+    }
+    array[position]=number;
+    for (int i = 0; i < 6; i++)
+    {
+        printf("%d\n",array[i]);
+    }
+    printf(" Please enter the  number which you want to delete \n");
+    int deletenumber , deletenumberpostion;
+    scanf("%d",&deletenumber);
+    for (int i = 0; i < 5; i++)
+    {
+        if (deletenumber==array[i])
+        {
+         deletenumberpostion=i;
+        } 
+    }
+    printf("so you want to delte the number the %d which is in the positiopn at %d in the arry\n",deletenumber,deletenumberpostion+1);
+    for (int i = deletenumberpostion; i <6; i++)
+    {
+        array[i]=array[i+1];
+    }
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d",array[i]);
+    }
+    return 0;
+}
