@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct krish
+{
+    int data ;
+    struct krish* next;
+};
+
+int main() {
+    struct krish* node1 = (struct krish*) malloc(sizeof(struct krish));
+    struct krish* node2 = (struct krish*) malloc(sizeof(struct krish));
+    int a ,b;
+    scanf("%d %d",&a,&b);
+    node1->data=b;
+    node1->next=node2;
+    node2->data=b;
+    node2->next=NULL;
+
+
+    return 0;
+}
